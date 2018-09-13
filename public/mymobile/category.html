@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/category.css"/>
     <script src="./assets/mui/js/mui.min.js"></script>
     <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-web.js"></script>
     <script src="./js/category.js"></script>
 </head>
 <body>
@@ -40,23 +41,7 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <div class="links">
-                        <a href="javascript:;" class="active">运动馆</a>
-                        <a href="javascript:;">女士馆</a>
-                        <a href="javascript:;">男士馆</a>
-                        <a href="javascript:;">户外馆</a>
-                        <a href="javascript:;">运动馆</a>
-                        <a href="javascript:;">女士馆</a>
-                        <a href="javascript:;">男士馆</a>
-                        <a href="javascript:;">户外馆</a>
-                        <a href="javascript:;">运动馆</a>
-                        <a href="javascript:;">女士馆</a>
-                        <a href="javascript:;">男士馆</a>
-                        <a href="javascript:;">户外馆</a>
-                        <a href="javascript:;">运动馆</a>
-                        <a href="javascript:;">女士馆</a>
-                        <a href="javascript:;">男士馆</a>
-                        <a href="javascript:;">户外馆</a>
-
+                        <!--<a href="javascript:;" class="active">运动馆</a>-->
                     </div>
                 </div>
             </div>
@@ -65,118 +50,36 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <ul class="brand-list mui-clearfix">
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand1.png" alt=""/>
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand2.png" alt=""/>
-                                <p>ADIDAS</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand3.png" alt=""/>
-                                <p>三叶草</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand4.png" alt=""/>
-                                <p>新百伦</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand5.png" alt=""/>
-                                <p>哥伦比亚</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand6.png" alt=""/>
-                                <p>匡威</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand1.png" alt=""/>
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand2.png" alt=""/>
-                                <p>ADIDAS</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand3.png" alt=""/>
-                                <p>三叶草</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand4.png" alt=""/>
-                                <p>新百伦</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand5.png" alt=""/>
-                                <p>哥伦比亚</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand6.png" alt=""/>
-                                <p>匡威</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand1.png" alt=""/>
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand2.png" alt=""/>
-                                <p>ADIDAS</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand3.png" alt=""/>
-                                <p>三叶草</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand4.png" alt=""/>
-                                <p>新百伦</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand5.png" alt=""/>
-                                <p>哥伦比亚</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/brand6.png" alt=""/>
-                                <p>匡威</p>
-                            </a>
-                        </li>
+                        <!--<li>-->
+                            <!--<a href="javascript:;">-->
+                                <!--<img src="images/brand1.png" alt=""/>-->
+                                <!--<p>耐克</p>-->
+                            <!--</a>-->
+                        <!--</li>-->
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <script id="tp1" type="text/html">
+        {{each result as value }}
+        <a href="javascript:;" data-id="{{value.id}}">{{value.categoryName}}</a>
+        {{/each}}
+    </script>
+
+    <script id="tp2" type="text/html">
+        {{each rows as value }}
+        <li>
+            <a href="javascript:;">
+                <img src="{{value.brandLogo}}" alt=""/>
+                <p>{{value.brandName}}</p>
+            </a>
+        </li>
+        {{/each}}
+        {{ if(!rows.length)}}
+            <div class="noResult">暂无数据</div>
+        {{/if}}
+    </script>
 </body>
 </html>

@@ -51,3 +51,7 @@
 .myContent .content-right .brand-list li a p {
   text-align: center;
 }
+.myContent .content-right .brand-list .noResult {
+  color: #f20;
+  font-size: 14px;
+}
