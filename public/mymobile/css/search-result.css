@@ -1,0 +1,57 @@
+.filter {
+  width: 90%;
+  margin: 10px auto 0 auto;
+}
+.filter div {
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #efeff4;
+}
+.filter div span {
+  font-size: 14px;
+}
+.product {
+  padding: 0 10px;
+}
+.product .list li {
+  width: 50%;
+  padding: 5px;
+  float: left;
+}
+.product .list li a {
+  padding: 0 5px;
+  box-shadow: 0 0 5px #ccc;
+  display: block;
+  overflow: hidden;
+}
+.product .list li a img {
+  width: 100%;
+}
+.product .list li a .name {
+  display: block;
+  text-align: center;
+  height: 44px;
+  line-height: 18px;
+  padding: 6px;
+  color: #8f8f94;
+  font-size: 14px;
+  overflow: hidden;
+}
+.product .list li a p {
+  font-size: 12px;
+  text-align: center;
+}
+.product .list li a p span:first-child {
+  color: #f30;
+  margin-right: 4px;
+}
+.product .list li a p span:last-child {
+  text-decoration: line-through;
+}
+.product .list li a .buy-now {
+  background-color: #006699;
+  display: block;
+  margin: 0 auto 10px;
+}

@@ -21,7 +21,9 @@ $(function(){
     $('.links').on("click","a",function(){
         $(this).addClass('active').siblings().removeClass('active');
         var id = $(this).attr("data-id");
+        //var id = $(this).data("id");
         getDatas(id);
+
     })
 })
 
