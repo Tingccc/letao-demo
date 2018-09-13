@@ -17,18 +17,18 @@ img {
   vertical-align: top;
 }
 .myheader {
-  background-color: #006699;
+  background-color: deepskyblue;
 }
 .myheader h1,
 .myheader .mui-icon {
   color: #fff;
 }
 .footer {
-  background-color: #006699;
+  background-color: deepskyblue;
 }
 .footer .mui-tab-item {
   color: #FFF;
 }
 .footer .mui-tab-item.mui-active {
-  color: darkorange;
+  color: red;
 }

@@ -1,0 +1,53 @@
+.myContent {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  bottom: 50px;
+  width: 100%;
+  background-color: #F5f5f5;
+}
+.myContent .content-left,
+.myContent .content-right {
+  height: 100%;
+  position: relative;
+}
+.myContent .content-left {
+  width: 80px;
+  float: left;
+}
+.myContent .content-left .links {
+  background-color: #fff;
+}
+.myContent .content-left .links a {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.myContent .content-left .links .active {
+  background-color: #F5f5f5;
+  border-right: 1px solid transparent;
+}
+.myContent .content-right {
+  margin-left: 80px;
+}
+.myContent .content-right .brand-list {
+  margin-top: 10px;
+  background-color: #fff;
+}
+.myContent .content-right .brand-list li {
+  width: 33.33%;
+  float: left;
+}
+.myContent .content-right .brand-list li a {
+  display: block;
+}
+.myContent .content-right .brand-list li a img {
+  width: 100%;
+}
+.myContent .content-right .brand-list li a p {
+  text-align: center;
+}
