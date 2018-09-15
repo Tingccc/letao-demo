@@ -11,6 +11,7 @@
 }
 .filter div span {
   font-size: 14px;
+  transtion: all 0.3s;
 }
 .product {
   padding: 0 10px;

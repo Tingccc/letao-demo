@@ -17,14 +17,14 @@ img {
   vertical-align: top;
 }
 .myheader {
-  background-color: deepskyblue;
+  background-color: #006699;
 }
 .myheader h1,
 .myheader .mui-icon {
   color: #fff;
 }
 .footer {
-  background-color: deepskyblue;
+  background-color: #006699;
 }
 .footer .mui-tab-item {
   color: #FFF;

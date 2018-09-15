@@ -1,0 +1,36 @@
+.getCode{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #006699;
+    font-size: 14px;
+}
+label {
+    font-size: 14px
+}
+
+#login-button {
+    padding: 0 10px;
+    height: 100%;
+}
+#regBtn,
+#loginBtn{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #006699;
+}
+
+.mui-input-group:after {
+    display: none;
+}
+.registerNow,
+.freeRegister {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 10px;
+    color: #006699;
+    font-size: 14px;
+}

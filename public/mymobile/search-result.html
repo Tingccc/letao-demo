@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./css/base.css"/>
     <link rel="stylesheet" href="./css/search-result.css"/>
     <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-web.js"></script>
+    <script src="./js/search-result.js"></script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav myheader">
@@ -34,73 +37,54 @@
         <span class="mui-tab-label">会员中心</span>
     </a>
 </nav>
-<div class="mui-content">
-    <div class="mui-row filter">
-        <div class="mui-col-xs-6">
-             价格
-            <span class="mui-icon mui-icon-arrowdown"></span>
+<div class="mui-content mui-scroll-wrapper" id="refreshContainer">
+    <div class="mui-scroll">
+        <div class="mui-row filter">
+            <div class="mui-col-xs-6" id="price">
+                价格
+                <span class="mui-icon mui-icon-arrowdown"></span>
+            </div>
+            <div class="mui-col-xs-6" id="sales">
+                销量
+                <span class="mui-icon mui-icon-arrowdown"></span>
+            </div>
         </div>
-        <div class="mui-col-xs-6">
-            销量
-            <span class="mui-icon mui-icon-arrowdown"></span>
+        <div class="product">
+            <ul class="list mui-clearfix">
+                <!--<li>-->
+                <!--<a href="#">-->
+                <!--<img src="images/product.jpg">-->
+                <!--<span class="name">-->
+                <!--adidas阿迪达斯 男式 场下休闲篮球鞋S83700-->
+                <!--</span>-->
+                <!--<p>-->
+                <!--<span>¥560.00</span>-->
+                <!--<span>¥888.00</span>-->
+                <!--</p>-->
+                <!--<button class="buy-now">立即购买</button>-->
+                <!--</a>-->
+                <!--</li>-->
+            </ul>
         </div>
     </div>
-    <div class="product">
-        <ul class="list mui-clearfix">
-            <li>
-                <a href="#">
-                    <img src="images/product.jpg">
-						<span class="name">
-							adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-						</span>
-                    <p>
-                        <span>¥560.00</span>
-                        <span>¥888.00</span>
-                    </p>
-                    <button class="buy-now">立即购买</button>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/product.jpg">
-						<span class="name">
-							adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-						</span>
-                    <p>
-                        <span>¥560.00</span>
-                        <span>¥888.00</span>
-                    </p>
-                    <button class="buy-now">立即购买</button>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/product.jpg">
-						<span class="name">
-							adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-						</span>
-                    <p>
-                        <span>¥560.00</span>
-                        <span>¥888.00</span>
-                    </p>
-                    <button class="buy-now">立即购买</button>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/product.jpg">
-						<span class="name">
-							adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-						</span>
-                    <p>
-                        <span>¥560.00</span>
-                        <span>¥888.00</span>
-                    </p>
-                    <button class="buy-now">立即购买</button>
-                </a>
-            </li>
-        </ul>
-    </div>
+
 </div>
+<script id="tpl" type="text/html">
+    {{each data}}
+    <li>
+        <a href="#">
+            <img src="{{$value.pic[0].picAddr}}">
+						<span class="name">
+							{{$value.proName}}
+						</span>
+            <p>
+                <span>¥{{$value.price}}</span>
+                <span>¥{{$value.oldPrice}}</span>
+            </p>
+            <button class="buy-now">立即购买</button>
+        </a>
+    </li>
+    {{/each}}
+</script>
 </body>
 </html>
