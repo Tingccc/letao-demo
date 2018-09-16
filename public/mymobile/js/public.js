@@ -3,10 +3,9 @@
  */
 $(function(){
 
-        $('body').on("tap",'a',function(){
-            mui.openWindow({
-                url:$(this).attr("href")
-            })
+    $('body').on("tap",'a',function(){
+        mui.openWindow({
+            url:$(this).attr("href")
         })
-
+    })
 });

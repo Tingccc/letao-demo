@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="./assets/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.picker.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.poppicker.css">
     <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./css/base.css"/>
-    <link rel="stylesheet" href="./css/form.css"/>
-    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/mui/js/mui.picker.js"></script>
+    <script src="assets/mui/js/mui.poppicker.js"></script>
     <script src="./assets/zepto/zepto.min.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="assets/artTemplate/template-web.js"></script>
     <script src="./js/public.js"></script>
+    <script src="./js/city.js"></script>
+    <script src="./js/addAddress.js"></script>
 
 </head>
 <body>
 <header class="mui-bar mui-bar-nav myheader">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-    <h1 class="mui-title">用户注册</h1>
+    <h1 class="mui-title">收货地址管理</h1>
 </header>
 <nav class="mui-bar mui-bar-tab footer">
-    <a class="mui-tab-item" href="index.html">
+    <a class="mui-tab-item mui-active" href="index.html">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
     </a>
@@ -40,17 +45,25 @@
 <div class="mui-content">
     <form class="mui-input-group">
         <div class="mui-input-row">
-            <label>用户名</label>
-            <input type="text" class="mui-input-clear" placeholder="请输入用户名" name="username">
+            <label>姓名</label>
+            <input type="text" class="mui-input-clear" placeholder="收货人姓名" name="recipients">
         </div>
         <div class="mui-input-row">
-            <label>密码</label>
-            <input type="password" class="mui-input-password" placeholder="请输入密码" name="password">
+            <label>邮编</label>
+            <input type="text" class="mui-input-clear" placeholder="邮编" name="postCode">
         </div>
-        <div class="mui-input-row" id="login-button">
-            <button type="button" class="mui-btn mui-btn-primary" id="loginBtn">登录</button>
+        <div class="mui-input-row">
+            <label>省市区</label>
+            <input type="text" class="mui-input-clear" placeholder="省市区" readonly id="city" name="address">
+
         </div>
-        <a href="register.html" class="freeRegister">免费注册</a>
+        <div class="mui-input-row">
+            <label>详细地址</label>
+            <input type="text" class="mui-input-clear" placeholder="详细地址" name="addressDetail">
+        </div>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-primary" id="confirmBtn">确认</button>
+        </div>
     </form>
 </div>
 </body>
