@@ -25,7 +25,11 @@ $(function(){
                 if(res.success){
                     mui.toast("登录成功");
                     setInterval(function(){
-                        location.href = "user.html";
+                        if(localStorage.getItem('returnUrl')){
+                            location.href = localStorage.getItem('returnUrl');
+                        } else {
+                            location.href = "user.html";
+                        }
                     },2000)
                 }else{
                     mui.toast(res.message);
